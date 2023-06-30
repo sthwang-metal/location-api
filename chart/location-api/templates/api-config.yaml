@@ -7,7 +7,7 @@ metadata:
 data:
   LOCATIONAPI_EVENTS_PUBLISHER_PREFIX: "{{ .Values.api.events.topicPrefix }}"
   LOCATIONAPI_EVENTS_PUBLISHER_URL: "{{ .Values.api.events.connectionURL }}"
-  LOCATIONAPI_OIDC: "{{ .Values.api.oidc.enabled }}"
+  LOCATIONAPI_OIDC_ENABLED: "{{ .Values.api.oidc.enabled }}"
   LOCATIONAPI_OIDC_AUDIENCE: "{{ .Values.api.oidc.audience }}"
   LOCATIONAPI_OIDC_ISSUER: "{{ .Values.api.oidc.issuer }}"
   LOCATIONAPI_OIDC_JWKS_REMOTE_TIMEOUT: "{{ .Values.api.oidc.jwksRemoteTimeout }}"
