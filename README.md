@@ -29,4 +29,36 @@ nats --server=nats:4222 --creds=/nsc/nkeys/creds/LOCAL/LOC/USER.creds sub --stre
 ```
 
 **Interacting with the GraphQL queries:**
-> Go to localhost:7905/playground
+> Go to localhost:XXXX/playground
+
+## Example GraphQL Queries
+
+### Create Location Mutation
+
+Input:
+```graphql
+mutation {
+    locationCreate(input:{
+        name: "DA",
+        ownerID: "testtnt-123456",
+        description: "DA Metro"
+    }) {
+        location{
+            id
+        }
+    }
+}
+```
+
+Output:
+```json
+{
+    "data": {
+        "locationCreate": {
+            "location": {
+                "id": "lctnloc-NW_5CWPx3xeOuh4Ak2WgS"
+            }
+        }
+    }
+}
+```
